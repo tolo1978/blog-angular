@@ -18,38 +18,20 @@
     <hr>
 
     <div class="grid">
+        @for(post of arrPosts; track post.id) {
         <article>
             <figure>
-                <img src="https://images.pexels.com/photos/12858513/pexels-photo-12858513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="paradisiaco">
+                <img [src]="post.url" [alt]="post.title">
             </figure>
-            <h3>Viaje a la isla de creta</h3>
-            <p>autor: Luis Llerena</p>
-            <p>Fecha: 25/02/2025</p>
-            <div class="content">
-                <p> aliquip ut dolore ad sunt officia culpa. Non aliquip excepteur occaecat duis magna. Commodo do duis laboris occaecat sint cupidatat sunt consequat laboris minim et eu. Quis in proident non qui pariatur sunt cupidatat officia.</p>
+            <h3>{{post.title}}</h3>
+            <p>autor: {{post.author}}</p>
+            <p>Fecha: {{post.date | date: 'dd/mm/YYYY'}}</p>  <!--| date: 'dd/mm/YY' sirve para dar formato. Hay qie importar en el ts   imports: [DatePipe],
+             -->
+            <div class="content" [innerHTML]="post.body">
             </div>
         </article>
-        <article>
-            <figure>
-                <img src="https://images.pexels.com/photos/12858513/pexels-photo-12858513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="paradisiaco">
-            </figure>
-            <h3>Viaje a la isla de creta</h3>
-            <p>autor: Luis Llerena</p>
-            <p>Fecha: 25/02/2025</p>
-            <div class="content">
-                <p> aliquip ut dolore ad sunt officia culpa. Non aliquip excepteur occaecat duis magna. Commodo do duis laboris occaecat sint cupidatat sunt consequat laboris minim et eu. Quis in proident non qui pariatur sunt cupidatat officia.</p>
-            </div>
-        </article>        <article>
-            <figure>
-                <img src="https://images.pexels.com/photos/12858513/pexels-photo-12858513.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="paradisiaco">
-            </figure>
-            <h3>Viaje a la isla de creta</h3>
-            <p>autor: Luis Llerena</p>
-            <p>Fecha: 25/02/2025</p>
-            <div class="content">
-                <p> aliquip ut dolore ad sunt officia culpa. Non aliquip excepteur occaecat duis magna. Commodo do duis laboris occaecat sint cupidatat sunt consequat laboris minim et eu. Quis in proident non qui pariatur sunt cupidatat officia.</p>
-            </div>
-        </article>
+    }
+
     </div>
 
 

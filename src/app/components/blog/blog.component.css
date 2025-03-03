@@ -1,0 +1,32 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.9375rem;
+}
+
+.sectionform .form :is(input, textarea) {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+.sectionform button {
+    padding: 10px
+}
+
+.sectionform{
+    background-color: whitesmoke;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+@media(min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

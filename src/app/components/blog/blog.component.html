@@ -25,7 +25,7 @@
             </figure>
             <h3>{{post.title}}</h3>
             <p>autor: {{post.author}}</p>
-            <p>Fecha: {{post.date | date: 'dd/mm/YYYY'}}</p>  <!--| date: 'dd/mm/YY' sirve para dar formato. Hay qie importar en el ts   imports: [DatePipe],
+            <p>Fecha: {{post.date | date: 'dd/mm/YYYY'}}</p>  <!--| date: 'dd/mm/YY' sirve para dar formato. Hay que importar en el ts   imports: [DatePipe],
              -->
             <div class="content" [innerHTML]="post.body">
             </div>

@@ -1,0 +1,16 @@
+<div class="grid">
+
+@for(post of arrPosts; track post.id) {
+    <article>
+        <figure>
+            <img [src]="post.url" [alt]="post.title">
+        </figure>
+        <h3>{{post.title}}</h3>
+        <p>autor: {{post.author}}</p>
+        <p>Fecha: {{post.date | date: 'dd/mm/YYYY'}}</p>  <!--| date: 'dd/mm/YY' sirve para dar formato. Hay que importar en el ts   imports: [DatePipe],
+         -->
+        <div class="content" [innerHTML]="post.body">
+        </div>
+    </article>
+}
+</div>
